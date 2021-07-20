@@ -9,11 +9,15 @@
  
 
 body {
-    margin: 0;
+    margin: 95px 0 0 0;
     padding: 0;
     background-color: var(--hl-color);
-    color: var(--main-text-color);
+    color: darkmagenta;
     font-family: 'Playfair Display', serif;
+}
+
+a{
+    text-decoration: none;
 }
 
 .container {
@@ -23,6 +27,7 @@ body {
     grid-template-areas: 
         "main main main main";
     background-color: var(--main-bg-color);
+    /* margin: 1000px 25px 25px 25px; */
     margin: 25px;
     height: 100vh;
 }
@@ -105,24 +110,48 @@ body {
     margin: 5px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: 9;
+}
+
 .home-container {
     grid-area: main;
+ 
+    /* height: 100vh; */
+    background-image: url('halong_bay.jpg');
+    background-size: cover;
+    box-shadow: var(--main-box-shadow);
+
+}
+
+.background-cover {
+    background-color: darkmagenta;
+    opacity: 0.4;
+    height: 100%;
+    width: 100%;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         'main-left main-right'
     ;
-    /* height: 100vh; */
 }
 
 .name-container {
-    grid-area: main-left;
+    grid-area: main-right;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 100px;
     height: 100%;
     width: 100%;
+    /* z-index: 99; */
+    color: white;
 }
 
 .main-img-container {
@@ -140,3 +169,26 @@ body {
     height: 100%;
     bottom: 0;
 }
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(20, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 45% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }

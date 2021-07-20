@@ -12,18 +12,18 @@
     <link rel='stylesheet' href='styles.css'/>
 </head>
 <body>
-    <nav>
+    <nav class='sticky'>
         <header class='header-container'>
             <div class='logo-container'>
-                <h1>BJL</h1>
+                <h1><a href='index.html'>BJL</a></h1>
                 <!-- <img src='./logo.png' alt='logo'> -->
             </div>
             <div class='nav-items-container'>
                 <ul>
-                    <li>Home</li>
-                    <li>Portfolio</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='index.html#portfolio'>Portfolio</a></li>
+                    <li><a href='index.html#blog'>Blog</a></li>
+                    <li><a href='index.html#contact'>Contact</a></li>
                 </ul>
             </div>
             <div class='social-container'>
@@ -36,26 +36,29 @@
     
     <div class='container'>
         <div class='home-container'>
-            <div class='name-container'>
-                <img src='./bry_edit.png' alt='bryan' />
-                <h1>Bryan James Lilly</h1>
-                <h3>Developer</h3>
+            <div class='background-cover'>
+                <div class='name-container typewriter'>
+                    <h1>Bryan James Lilly</h1>
+                    <!-- <h3>Developer / Explorer</h3> -->
+                </div>
             </div>
-            <div class='main-img-container'>
+
+
+            <!-- <div class='main-img-container'>
                 <img src='./green-transparent.png' alt='green' />
-            </div>
+            </div> -->
         </div>
     </div>
 
-    <div class='portfolio-container'>
+    <div class='portfolio-container' id='portfolio'>
         <h1>Portfolio</h1>
     </div>
 
-    <div class='blog-container'>
+    <div class='blog-container' id='blog'>
         <h1>Blog</h1>
     </div>
 
-    <div class='contact-container'>
+    <div class='contact-container' id='contact'>
         <h1>Contact</h1>
     </div>
 </body>
